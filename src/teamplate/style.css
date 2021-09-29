@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.hi {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 700px;
+  margin-top: 10px;
+}
+.hi img {
+  width: 200px;
+}
+
+i {
+  color: red;
+  border: 1px solid red;
+  height: 40px;
+  padding: 10px;
+  border-radius: 5px;
+}
