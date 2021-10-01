@@ -1,0 +1,9 @@
+.list-group-item {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-around;
+  align-items: center;
+}
+.margin img {
+  padding-right: 50px;
+}
