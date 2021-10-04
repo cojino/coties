@@ -1,18 +1,22 @@
 import React from "react";
-import Button from "./button";
 import "./Cities.css";
 
-function Cities({ city, img }) {
+function Cities({ c, deleteHandler }) {
+  const f = () => deleteHandler(c.id);
   return (
     <div>
-      <ul class=" list-group list-group-flush">
-        <li class="list-group-item">
+      <ul className=" list-group list-group-flush">
+        <li className="list-group-item">
           <div className="margin">
-            <img src={img} alt={city} />
-            {city}
+            <img src={c.img} alt={c.city} />
+            {c.city}
           </div>
           <div>
-            <Button />
+            <span>
+              <button onClick={f} type="button" className="btn btn-danger">
+                <i className="fas fa-trash"></i>
+              </button>
+            </span>
           </div>
         </li>
       </ul>

@@ -14,11 +14,16 @@ const ListCity = () => {
       img: "https://www.tripsavvy.com/thmb/FwmQ-JvBEBDDlVb-j_zdEo0iVsA=/2048x1152/smart/filters:no_upscale()/beach-5b59c9b7c9e77c004b3e0ff0.jpg",
     },
   ]);
+  const deleteCity = (deletedId) => {
+    const newList = listCity.filter((c) => c.id !== deletedId);
+
+    setListcity([...newList]);
+  };
   return (
     <div>
-      {listCity.map((c) => (
-        <Cities city={c.city} img={c.img} key={c.id} />
-      ))}
+      {listCity.map((c) => {
+        return <Cities deleteHandler={deleteCity} c={c} key={c.id} />;
+      })}
     </div>
   );
 };
